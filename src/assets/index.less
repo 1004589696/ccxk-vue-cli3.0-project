@@ -1,0 +1,347 @@
+@px: 1px; // 定义1px 单位
+
+
+// Start 内边距列表;
+@p-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.p-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .p@{value} {
+        padding: (@px * @value);
+    }
+
+    .p-loop(@p-list, (@index+1));
+}
+
+.p-loop(@p-list);
+// End 内边距列表;
+
+
+// Start 左右内边距列表;
+@plr-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.plr-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .plr@{value} {
+        padding-left: (@px * @value);
+        padding-right: (@px * @value);
+    }
+
+    .plr-loop(@plr-list, (@index+1));
+}
+
+.plr-loop(@plr-list);
+// End 左右内边距列表;
+
+
+// Start 上下内边距列表;
+@ptb-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.ptb-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .ptb@{value} {
+        padding-top: (@px * @value);
+        padding-bottom: (@px * @value);
+    }
+
+    .ptb-loop(@ptb-list, (@index+1));
+}
+
+.ptb-loop(@ptb-list);
+// End 上下内边距列表;
+
+
+// Start 上内边距列表;
+@pt-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.pt-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .pt@{value} {
+        padding-top: (@px * @value);
+    }
+
+    .pt-loop(@pt-list, (@index+1));
+}
+
+.pt-loop(@pt-list);
+// End 上内边距列表;
+
+
+// Start 下内边距列表;
+@pb-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.pb-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .pb@{value} {
+        padding-bottom: (@px * @value);
+    }
+
+    .pb-loop(@pb-list, (@index+1));
+}
+
+.pb-loop(@pb-list);
+// End 下内边距列表;
+
+
+// Start 下内边距列表;
+@pl-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.pl-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .pl@{value} {
+        padding-left: (@px * @value);
+    }
+
+    .pl-loop(@pl-list, (@index+1));
+}
+
+.pl-loop(@pl-list);
+// End 左内边距列表;
+
+
+// Start 右内边距列表;
+@pr-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.pr-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .pr@{value} {
+        padding-right: (@px * @value);
+    }
+
+    .pr-loop(@pr-list, (@index+1));
+}
+
+.pr-loop(@pr-list);
+// End 右内边距列表;
+
+
+
+// Start 外边距列表;
+@m-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.m-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .m@{value} {
+        margin: (@px * @value);
+    }
+
+    .m-loop(@m-list, (@index+1));
+}
+
+.m-loop(@m-list);
+// End 外边距列表;
+
+
+// Start 左右外边距列表;
+@mlr-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.mlr-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .mlr@{value} {
+        margin-left: (@px * @value);
+        margin-right: (@px * @value);
+    }
+
+    .mlr-loop(@mlr-list, (@index+1));
+}
+
+.mlr-loop(@mlr-list);
+// End 左右外边距列表;
+
+
+// Start 上下外边距列表;
+@mtb-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.mtb-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .mtb@{value} {
+        margin-top: (@px * @value);
+        margin-bottom: (@px * @value);
+    }
+
+    .mtb-loop(@mtb-list, (@index+1));
+}
+
+.mtb-loop(@mtb-list);
+// End 上下外边距列表;
+
+
+// Start 上外边距列表;
+@mt-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.mt-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .mt@{value} {
+        margin-top: (@px * @value);
+    }
+
+    .mt-loop(@mt-list, (@index+1));
+}
+
+.mt-loop(@mt-list);
+// End 上外边距列表;
+
+
+// Start 下外边距列表;
+@mb-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.mb-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .mb@{value} {
+        margin-bottom: (@px * @value);
+    }
+
+    .mb-loop(@mb-list, (@index+1));
+}
+
+.mb-loop(@mb-list);
+// End 下外边距列表;
+
+
+// Start 左外边距列表;
+@ml-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.ml-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .ml@{value} {
+        margin-left: (@px * @value);
+    }
+
+    .ml-loop(@ml-list, (@index+1));
+}
+
+.ml-loop(@ml-list);
+// End 左内边距列表;
+
+
+// Start 右外边距列表;
+@mr-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+.mr-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .mr@{value} {
+        margin-right: (@px * @value);
+    }
+
+    .mr-loop(@mr-list, (@index+1));
+}
+
+.mr-loop(@mr-list);
+// End 右外边距列表;
+
+// Start 圆角列表;
+@radius-list: 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 18, 20, 22, 24, 25, 26, 28, 30;
+
+.radius-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .radius@{value} {
+        border-radius: (@px * @value);
+    }
+
+    .radius-loop(@radius-list, (@index+1));
+}
+
+.radius-loop(@radius-list);
+// End 圆角列表;
+
+
+
+// Start 背景色列表;
+@bg-list: 255;
+
+.bg-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .bg@{value} {
+        background-color: rgba(@value, @value, @value, 1)
+    }
+
+    .bg-loop(@bg-list, (@index+1));
+}
+
+.bg-loop(@bg-list);
+// End 背景色列表;
+
+
+// Start 背景色列表;
+@color-list: 255;
+
+.color-loop(@arr, @index: 1, @value: extract(@arr, @index)) when(length(@arr)>=@index ) {
+    .color@{value} {
+        color: rgba(@value, @value, @value, 1)
+    }
+
+    .color-loop(@color-list, (@index+1));
+}
+
+.color-loop(@color-list);
+// End 背景色列表;
+
+
+.tar {
+    text-align: right;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tal {
+    text-align: left;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.overhidden {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inblock {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fw {
+    font-weight: 600;
+}
+
+.space {
+    white-space: pre-wrap;
+}
+
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+ol,
+ul,
+li,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+.star::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 12px;
+    line-height: 1;
+    content: "*";
+}
