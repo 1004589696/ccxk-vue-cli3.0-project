@@ -4,6 +4,7 @@
     </div>
 </template>
 <script>
+import * as utils from "@/utils/utils.js";
 export default {};
 </script>
 <style lang="less" scoped>

@@ -13,26 +13,20 @@
             <router-link to="/css-select-none">css 属性防止复制</router-link>
         </div>
         <div class="list-item">
-            <router-link to="/css-ellipsis">css 控制多余几行文字，显示  ...</router-link>
+            <router-link to="/css-ellipsis">css 控制多余几行文字，显示 ...</router-link>
         </div>
     </div>
 </template>
-
 <script>
 export default {
-    data(){
-        return{
-
-        }
+    data() {
+        return {};
     },
-    created(){
-
+    methods: {
+        setNickName(name) {
+            this.$store.dispatch("set_userInfo", name);
+        },
     },
-    methods:{
-        setNickName(name){
-            this.$store.dispatch("set_userInfo",name);
-        }
-    }
 };
 </script>
 <style lang="less" scoped>
